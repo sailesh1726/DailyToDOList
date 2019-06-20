@@ -1,12 +1,16 @@
 package com.sailesh.sparks.dailytodolist.viewmodel;
 
-import android.arch.lifecycle.ViewModel;
-import android.database.Observable;
+import androidx.databinding.ObservableBoolean;
+import androidx.lifecycle.ViewModel;
 
 public class ToDoListViewModel extends ViewModel {
-    private Observable<Boolean> helloVisible;
+    private ObservableBoolean helloVisible = new ObservableBoolean(true);
 
-    public Observable<Boolean> getHelloVisible() {
+    public ObservableBoolean getHelloVisible() {
         return helloVisible;
+    }
+
+    public void setHelloVisible(boolean helloVisible) {
+        this.helloVisible.set(helloVisible);
     }
 }

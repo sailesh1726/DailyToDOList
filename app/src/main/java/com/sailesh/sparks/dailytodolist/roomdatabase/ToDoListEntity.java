@@ -1,7 +1,7 @@
 package com.sailesh.sparks.dailytodolist.roomdatabase;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "daily_todo")
 public class ToDoListEntity {
@@ -31,5 +31,9 @@ public class ToDoListEntity {
 
     public int getPriority() {
         return priority;
+    }
+
+    public void setuID(int uID) {
+        this.uID = uID;
     }
 }

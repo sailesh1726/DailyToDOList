@@ -2,23 +2,23 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
+        <import type="android.view.View"/>
         <variable
             name="viewModel"
             type="com.sailesh.sparks.dailytodolist.viewmodel.ToDoListViewModel" />
     </data>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/hello"
-        android:visibility="@{viewModel.helloVisible}"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/hello_blank_fragment"
+            android:visibility="@{viewModel.helloVisible ? View.VISIBLE : View.GONE}"/>
+
+    </FrameLayout>
 </layout>
